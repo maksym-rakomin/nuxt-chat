@@ -10,11 +10,9 @@ export const mutations = {
   clearData(state) {
     state.user = {};
     state.messages = [];
+  },
+  SOCKET_newMessage(state, message) {
+    state.messages.push(message)
   }
 }
 
-export const actions = {
-  SOCKET_newMessage(ctx, data) {
-    console.log('Message received', data)
-  }
-}
