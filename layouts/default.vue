@@ -2,7 +2,7 @@
   <!-- App.vue -->
 
   <v-app app dark>
-    <v-navigation-drawer app v-model="drawer">
+    <v-navigation-drawer app v-model="drawer" mobile-break-point="650">
       <v-list subheader>
         <v-subheader>Список людей в комнате</v-subheader>
         <v-list-tile v-for="u in users" :key="u.id" avatar @click.prevent>
@@ -29,7 +29,7 @@
 
     <!-- Sizes your content based upon application components -->
     <v-content>
-      <div>
+      <div style="height: 100%">
         <nuxt />
       </div>
     </v-content>

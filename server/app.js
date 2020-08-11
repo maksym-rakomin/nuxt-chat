@@ -14,6 +14,7 @@ io.on('connection', socket => {
 
     cb({userId: socket.id});
     socket.emit('newMessage', m('admin', `Добро пожаловать ${data.name}`));
+    socket.emit('newMessage', m('test', `Добро пожаловать sdsssssssssss ssssssssss ssssssss sssssssdsssssssssss ssssssssss ssssssss sssssssdsssssssssss ssssssssss ssssssss sssssssdsssssssssss ssssssssss ssssssss sssssssdsssssssssss ssssssssss ssssssss ssssssss s  s${data.name}`));
     socket.broadcast.to(data.room)
       .emit('newMessage', m('admin', `Пользователь ${data.name} теперь в чате.`))
   })
