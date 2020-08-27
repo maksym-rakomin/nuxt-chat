@@ -50,7 +50,8 @@ export default {
     margin-bottom 1rem
 
     p {
-        margin-bottom 0
+        margin-bottom 0;
+        word-wrap: break-word;
     }
 }
 
